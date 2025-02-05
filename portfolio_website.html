@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shervin Bruce S - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+      body {
+            background-color: black;
+            color: #33ff33;
+            font-family: 'Courier New', monospace;
+            text-align: center;
+            overflow-x: hidden;
+        }
+        canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: -1;
+        }
+        .terminal {
+            border: 2px solid #33ff33;
+            padding: 20px;
+            width: 80%;
+            margin: auto;
+            margin-top: 50px;
+            background: rgba(0, 0, 0, 0.9);
+            box-shadow: 0px 0px 15px #33ff33;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        .typing {
+            border-right: .15em solid #33ff33;
+            white-space: nowrap;
+            overflow: hidden;
+            animation: typing 3s steps(40, end) infinite alternate;
+            font-size: 1.5rem;
+        }
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+        a {
+            color: #33ff33;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        a:hover {
+            color: #00ff00;
+        }
+        .project-logo {
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+      <canvas id="matrix"></canvas>
+    <div class="terminal">
+        <h1 class="typing" id="typing-text">Hi, I am Shervin Bruce S</h1>
+        <p>Cybersecurity Enthusiast | Ethical Hacker | Web Developer</p>
+    </div>
+    
+    <div class="terminal">
+        <h2>About</h2>
+        <p>Motivated undergraduate student with a strong foundation in cybersecurity principles and practices. Skilled in
+        threat analysis, risk assessment, and incident response, with hands-on experience in securing networks and data.
+        Passionate about staying current with industry trends and eager to contribute to enhancing security measures.</p>
+    </div>
+
+    <div class="terminal">
+    <h2>Contact info</h2>
+    <p>+91 9344729620</p>
+    <a href="mailto:bruc873@gmail.com" target="_blank">bruc873@gmail.com</a>
+</div>
+
+    <div class="terminal">
+        <h2>Resume & Links</h2>
+        <a href="Shervin_Bruce_CV.pdf" download>Download Resume</a>
+        <a href="https://www.linkedin.com/in/shervin-bruce-s-633526249/" target="_blank">LinkedIn</a>
+        <a href="https://github.com/shervinbruce1190" target="_blank">GitHub</a>
+    </div>
+    
+    <div class="terminal">
+        <h2>Skillset & Certifications</h2>
+        <ul>
+            <li>Programming: Python, JavaScript, C</li>
+            <li>Web: HTML, CSS, JavaScript</li>
+            <li>Tools: Burp Suite, Wireshark, NMAP, Cisco Packet Tracer</li>
+            <li>Cybersecurity & Ethical Hacking</li>
+        </ul>
+        <h3>Certifications:</h3>
+        <ul>
+            <li>CEH v12 (Master) - EC Council</li>
+            <li>Network Support and Security - Cisco</li>
+            <li>CAP - SecOps</li>
+            <li>Simplilearn: Ethical Hacking</li>
+        </ul>
+    </div>
+    
+    <div class="terminal">
+        <h2>Education</h2>
+        <p><strong>B.Tech in Information Technology</strong> - St. Joseph’s Institute Of Technology (2021-2025) | CGPA: 7.02</p>
+    </div>
+    
+    <div class="terminal">
+        <h2>Experience</h2>
+        <p><strong>Cybersecurity Tester</strong> - Rootecstak (Jul 2024 - Aug 2024)</p>
+        <p>Gained hands-on experience in securing web applications and solving PortSwigger labs.</p>
+        <p><strong>Web Development Intern</strong> - Oasis Infobyte (Sep 2023 - Oct 2023)</p>
+        <p>Developed four applications, including a music player and an e-commerce website.</p>
+    </div>
+    
+    <div class="terminal">
+        <h2>Projects</h2>
+       <ul>
+            <li>
+           <center>     <img src="smart_attendance_logo.jpg" alt="Smart Attendance System" class="project-logo" onclick="showProject('smartAttendance')"></center>
+                <strong>Smart Attendance System (Python, OpenCV)</strong>
+                <p id="smartAttendance" style="display:none;">Automated attendance tracking using facial recognition.<br>Developed dashboards for analytics and reporting.</p>
+            </li>
+            <li>
+             <center>   <img src="portfolio_logo.jpg" alt="Portfolio Website" class="project-logo" onclick="showProject('portfolioWebsite')"> </center>
+                <strong>Portfolio Website (HTML, CSS, JavaScript)</strong>
+                <p id="portfolioWebsite" style="display:none;">Created a responsive portfolio showcasing projects and skills.<br>Enhanced interactivity with dynamic JavaScript features.</p>
+            </li>
+            <li>
+               <center><img src="temperature_converter_logo.jpg" alt="Temperature Converter" class="project-logo" onclick="showProject('tempConverter')"></center>
+                <strong>Temperature Converter (HTML, CSS, JavaScript)</strong>
+                <p id="tempConverter" style="display:none;">Developed a converter for Celsius, Fahrenheit, and Kelvin.<br>Ensured responsiveness and cross-browser compatibility.</p>
+            </li>
+            <li>
+             <center>   <img src="threat_tracker_logo.jpg" alt="Threat Tracker" class="project-logo" onclick="showProject('threatTracker')"> </center>
+                <strong>Threat Tracker Using SIEM (SIEM Tools, Log Analysis)</strong>
+                <p id="threatTracker" style="display:none;">Developed a system to monitor and analyze security events in real-time.<br>Implemented threat detection and response mechanisms.<br>Gained expertise in log analysis, threat hunting, and correlation rule creation.</p>
+            </li>
+        </ul>
+    </div>
+    <div class="terminal">
+        <h2>Achievements</h2>
+        <ul>
+            <li>Active CTF Player on TryHackMe and PicoCTF</li>
+            <li>Bug Bounty Hunter - Participates on HackerOne</li>
+            <li>Open Source Contributor</li>
+            <li>Hackathon - Participated in Hindustan University Hackathon</li>
+        </ul>
+    </div>
+    
+    <script>
+        const textElement = document.getElementById("typing-text");
+        const text = "Hi, I am Shervin Bruce S.";
+        let index = 0;
+
+        function typeEffect() {
+            if (index < text.length) {
+                textElement.textContent = text.substring(0, index + 1);
+                index++;
+                setTimeout(typeEffect, 100);
+            }
+        }
+        typeEffect();
+        const canvas = document.getElementById('matrix');
+        const ctx = canvas.getContext('2d');
+
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+        const fontSize = 16;
+        const columns = canvas.width / fontSize;
+        const drops = Array.from({ length: columns }).fill(1);
+
+        function drawMatrix() {
+            ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            ctx.fillStyle = '#0F0';
+            ctx.font = `${fontSize}px monospace`;
+
+            for (let i = 0; i < drops.length; i++) {
+                const text = characters[Math.floor(Math.random() * characters.length)];
+                ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+
+                if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+                    drops[i] = 0;
+                }
+                drops[i]++;
+            }
+        }
+        setInterval(drawMatrix, 50);
+
+        function showProject(projectId) {
+            const projectDescription = document.getElementById(projectId);
+            if (projectDescription.style.display === 'none') {
+                projectDescription.style.display = 'block';
+            } else {
+                projectDescription.style.display = 'none';
+            }
+        }
+    </script>
+
+</body>
+</html>
